@@ -1,0 +1,16 @@
+<div [ngStyle]="{'text-align': 'center'}">
+    <img class="image-serie" *ngIf="show?.image?.medium !== null" mat-card-image
+        src="{{show.image ? show.image.medium : ''}}" alt="image" [ngStyle]="{'width': '35vh'}">
+    <img class="img-not-fount" *ngIf="show?.image?.medium == undefined" src="../../../assets/images/no-poster.jpg"
+        alt="" [ngStyle]="{'width': '35vh', 'height': '40vh'}">
+
+</div>
+
+<div [ngStyle]="{'margin-left': '20px', 'margin-right': '20px'}">
+    <h2 class="movie-name">{{show?.name}}</h2>
+    <p class="show-summary">{{strip(show?.summary)}}</p>
+    <p *ngIf="show?.language"><b>Language</b>: {{show?.language}}</p>
+    <p *ngIf="show?.premiered"><b>Premiered</b>: {{show?.premiered | date}}</p>
+
+
+</div>

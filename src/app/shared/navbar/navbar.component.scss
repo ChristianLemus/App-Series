@@ -1,0 +1,19 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+button {
+    outline: none;
+}
+ 
+.buton-aside {
+    margin-left: -1%;
+}
+
+::ng-deep .mat-button-focus-overlay {
+    display: none;
+}
+
+ul{
+    list-style:none;
+}

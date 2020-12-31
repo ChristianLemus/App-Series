@@ -1,0 +1,31 @@
+mat-drawer-container {
+    height: 100%;
+}
+
+mat-drawer-content {
+    margin-top: 2%;
+}
+
+mat-drawer {
+    width: 35vh;
+}
+
+mat-selection-list {
+    outline: none;
+}
+
+.title-sidenav {
+    padding: 20px 24px 0px 24px;
+    margin-bottom: 8px;
+}
+
+.title {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.container-router-outlet {
+    width: 100%;
+}

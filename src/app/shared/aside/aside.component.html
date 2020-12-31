@@ -1,0 +1,45 @@
+<div fxFill fxLayout="column">
+
+    <app-navbar (navToggle)="mainNav.toggle()"></app-navbar>
+
+    <mat-drawer-container autosize class="is-fullheight-with-navbar is-fullwidth">
+        <mat-drawer class="sidenav" #mainNav mode="side" opened>
+            <mat-selection-list [multiple]="false">
+                <h1 class="title-sidenav title">Genders</h1>
+                <!-- initial list series -->
+                <mat-list-option class="filter-comedy" data="Commedy" routerLink="list/{{'comedy'}}">
+                    <mat-icon mat-list-icon>movie</mat-icon>
+                    Comedy
+                </mat-list-option>
+                <mat-list-option class="filter-drama" data="Drama" routerLink="list/{{'drama'}}">
+                    <mat-icon mat-list-icon>movie</mat-icon>
+                    Drama
+                </mat-list-option>
+                <mat-list-option class="filter-fiction" data="Science Fiction" routerLink="list/{{'fiction'}}">
+                    <mat-icon mat-list-icon>movie</mat-icon>
+                    Science Fiction
+                </mat-list-option>
+                <mat-list-option class="filter-thriller" data="Thriller" routerLink="list/{{'thriller'}}">
+                    <mat-icon mat-list-icon>movie</mat-icon>
+                    Thriller
+                </mat-list-option>
+                <mat-list-option class="filter-horror" data="Horror" routerLink="list/{{'horror'}}">
+                    <mat-icon mat-list-icon>movie</mat-icon>
+                    Horror
+                </mat-list-option>
+                <!-- recommended series -->
+                <h1 class="title-sidenav title">Recommended</h1>
+                <mat-list-option class="filter-tops" data="Fascinating Series" routerLink="list/{{'romance'}}">
+                    <mat-icon mat-list-icon>movie_filter</mat-icon>
+                    Top Series
+                </mat-list-option>
+            </mat-selection-list>
+        </mat-drawer>
+        <!-- main container  -->
+        <mat-drawer-content>
+            <div class="container-router-outlet" fxLayout="row" fxLayoutAlign="center start">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

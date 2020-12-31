@@ -6,6 +6,17 @@ export const environment = {
   production: false
 };
 
+export const TITLES = {
+  search: "Search | tvmaze",
+  details: " | tvmaze"
+}
+
+export const API_URLS = {
+  search: 'https://api.tvmaze.com/search/shows',
+  shows: 'https://api.tvmaze.com/shows'
+};
+
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

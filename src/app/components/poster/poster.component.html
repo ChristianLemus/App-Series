@@ -1,0 +1,16 @@
+<div fxLayoutAlign="center start" routerLink="detail/{{show.id}}" class="separe-card">
+    <mat-card>
+        <mat-card-content>
+            <img *ngIf="show?.image?.medium !== ''" src="{{show.image?.medium}}">
+            <img class="img-not-fount" *ngIf="show?.image?.medium == undefined" src="../../../assets/images/no-poster.jpg" alt="">
+        </mat-card-content>
+        <mat-card-footer>
+            <p *ngIf="show.name !== ''" class="serie-name">
+                {{show.name}}
+            </p>
+            <p *ngIf="show.name === undefined" class="serie-name">
+                No Data Found
+            </p>
+        </mat-card-footer>
+    </mat-card>
+</div>
